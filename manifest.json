@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "ConsentLens",
+    "description": "Real-time tracker detector before cookie consent.",
+    "version": "0.1",
+    "icons": {
+      "128": "icon128.png"
+    },
+    "permissions": ["storage"],
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["consentlens.js"],
+        "run_at": "document_idle"
+      }
+    ],
+    "action": {
+      "default_icon": "icon128.png"
+    }
+  }
+  
